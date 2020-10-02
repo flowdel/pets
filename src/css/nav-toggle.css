@@ -1,0 +1,41 @@
+.nav-toggle {
+    display: flex;
+}
+
+.nav-toggle__button {
+    cursor: pointer;
+    justify-content: space-between;
+    border: 0;
+    background: 0;
+    /* display: none;
+    font-size: 0;
+    color: transparent;
+     */
+}
+
+.nav-toggle__item {
+    display: flex;
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background-color: #e6c269;
+}
+
+.nav-toggle__item:before,
+.nav-toggle__item:after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #e6c269;
+    position: absolute;
+    z-index: 1;
+    transition: transform .2s linear;
+}
+
+.nav-toggle__item:before {
+    top: -6px;
+}
+
+.nav-toggle__item:after {
+    bottom: -6px;
+}

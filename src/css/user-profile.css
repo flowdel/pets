@@ -1,0 +1,27 @@
+.user-profile {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-profile input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #d1cece;
+    padding: 10px 0;
+    margin-bottom: 5px;
+}
+
+.user-profile input:last-child {
+    margin-bottom: 30px;
+}
+
+.user-profile label {
+    color: #969696;
+    font-size: 12px;
+}
+
+
+
+
+
+

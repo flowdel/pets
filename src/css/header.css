@@ -1,0 +1,44 @@
+.header {
+    background-color: white;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    /* padding-top: 15px;
+    padding-bottom: 15px; */
+}
+
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo p {
+    margin: 2px 0px;
+}
+
+.header__logo p:first-child {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header__logo p:last-child {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.header__logo-img {
+    display: block;
+    height: 75px;
+    width: 75px;
+    margin-right: 23px;
+}
+
+.header__logo-name {
+    text-align: center;
+}
+
+

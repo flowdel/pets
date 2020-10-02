@@ -1,0 +1,18 @@
+.cooker-profile__img {
+    width: 100%;
+}
+
+.cooker-profile__description {
+    font-size: 14px;
+    line-height: 20px;
+    color: #868686;
+    margin-bottom: 15px;
+}
+
+.cooker-profile__current-dishes {
+    margin-bottom: 15px;
+}
+
+.cooker-profile__prev-dishes .cooker-profile__item {
+    opacity: .5;
+}
