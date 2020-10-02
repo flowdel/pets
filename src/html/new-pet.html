@@ -30,12 +30,6 @@
                             <nav class="nav" id="nav">
                                 <a class="nav__link" href="#">
                                     <div>ПРИЮТИТЬ</div>
-                                    <div class="nav__options">
-                                        <a class="nav__option-item" href="#">КОШКИ</a>
-                                        <a class="nav__option-item" href="#">СОБАКИ</a>
-                                        <a class="nav__option-item" href="#">КАК ПРИЮТИТЬ</a>
-                                        <a class="nav__option-item" href="#">СТОИМОСТЬ УСЛУГ</a>
-                                    </div>
                                 </a>
                                 <a class="nav__link" href="#"><div>УСЛУГИ</div></a>
                                 <a class="nav__link" href="#"><div>О НАС</div></a>
@@ -49,32 +43,34 @@
 
             <div class="spacer"></div>
             <div class="container">
-                <div class="pet-preview__container">
-                    <div class="pet-preview">
-                        <div class="pet-preview__img" style="background-image: url('../../images/cat.png'); background-size: cover;" alt="">
-                            <div class="pet-preview__text">ЗАБРАТЬ ДОМОЙ</div>
-                        </div>
-                        <div class="pet-preview__info">
-                            <div class="product-preview__name">НАШИ КИЦУНИ</div>
-                        </div>
-                    </div>
-                    <div class="pet-preview">
-                        <div class="pet-preview__img" style="background-image: url('../../images/dog.png'); background-size: cover;" alt="">
-                            <div class="pet-preview__text">ЗАБРАТЬ ДОМОЙ</div>
+                <div class="form__container">
+                    <form action="" class="form">
+                        <div class="form__img" style="background-image: url('../../images/cat.png'); background-size: cover;"></div>
+                        <div class="form__content">
+                            <div class="headline">Заявка на усыновление</div>
+                            <table>
+                                <tr>
+                                    <td> <label for="form__surname">Фамилия:</label></td>
+                                    <td><input type="text" value="" id="form__surname"></td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="form__name">Имя:</label></td>
+                                    <td><input type="text" value="" id="form__name"></td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="form__number">Телефон:</label></td>
+                                    <td><input type="text" value="" id="form__number"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="form__description">Опишите себя:</label></td>
+                                    <td><input id="form__description" cols="30" rows="5"></td>
+                                </tr>
+                            </table>
                         </div>
                         
-                        <div class="pet-preview__info">
-                            <div class="product-preview__name">НАШИ БОБАНИ</div>
-                        </div>
-                    </div>
-                    <div class="pet-preview">
-                        <div class="pet-preview__img" style="background-image: url('../../images/dog1.png'); background-size: cover;" alt="">
-                            <div class="pet-preview__text">ПОДРОБНЕЕ</div>
-                        </div>
-                        <div class="pet-preview__info">
-                            <div class="product-preview__name">КАК ПРИЮТИТЬ</div>
-                        </div>
-                    </div>
+                       
+                        
+                    </form>
                 </div>
             </div>
         </div>

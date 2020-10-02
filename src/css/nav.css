@@ -1,6 +1,7 @@
 .nav { 
     font-size: 20px;
     display: flex;
+    position: relative;
 }
 
 .nav__link { 
@@ -8,16 +9,49 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 150px;
-    height: 100px;
     text-decoration: none;
     color: black;
+    width: 150px;
+    
+}
+.nav__link div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
 }
 
 .nav__link:hover {
     background-color: #FFB043;
     color: white;
 }
+
+
+.nav__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFB043;
+    width: 300px;
+    z-index: 1
+}
+
+.nav__option-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-decoration: none;
+    color: black
+}
+
+.nav__option-item:hover {
+    color: white;
+    background-color: #FF9100;
+}
+
+
+
 
 /* .nav { on mobile
     font-size: 9px;
