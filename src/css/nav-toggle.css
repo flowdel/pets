@@ -16,26 +16,32 @@
 .nav-toggle__item {
     display: flex;
     position: relative;
-    width: 20px;
-    height: 2px;
-    background-color: #e6c269;
+    width: 30px;
+    height: 3px;
+    background-color: #FFB043;
 }
 
 .nav-toggle__item:before,
 .nav-toggle__item:after {
     content: "";
-    width: 20px;
-    height: 2px;
-    background-color: #e6c269;
+    width: 30px;
+    height: 3px;
+    background-color: #FFB043;
     position: absolute;
     z-index: 1;
     transition: transform .2s linear;
 }
 
 .nav-toggle__item:before {
-    top: -6px;
+    top: -10px;
 }
 
 .nav-toggle__item:after {
-    bottom: -6px;
+    bottom: -10px;
+}
+
+@media (min-width: 980px) {
+    .nav-toggle {
+        display: none;
+    }
 }

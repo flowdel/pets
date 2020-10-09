@@ -1,0 +1,54 @@
+.form__container {
+    padding: 25px;
+    background-color: white;
+}
+
+.form {
+    display: flex;
+}
+
+.form__table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-shrink: 8; /* тупость полная ... */
+}
+
+.form input {
+    padding: 5px 0;
+    border: 1px solid #d1cece;
+    width: 100%;
+}
+
+.form textarea {
+    border: 1px solid #d1cece;
+    width: 100%;
+}
+
+.form input, 
+.form textarea {
+    outline-color: #FFB043;
+}
+
+.form__img {
+    width: 210px; 
+    margin-right: 30px;
+}
+
+.form__column {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form__row .form__column:last-child {
+    color: #C4C4C4;
+}
+
+.form__row .form__column:last-child div {
+    margin-right: 5px
+}
+
+.form__row .form__column:last-child div:hover {
+    color: #FFB043;
+    cursor: pointer;
+}

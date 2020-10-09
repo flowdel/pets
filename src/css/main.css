@@ -31,18 +31,32 @@ img {
 }
 
 .container {
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .spacer {
     height: 1px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .headline {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 15px;
     color: #FFB043;
     font-weight: 400;
+}
+
+@media (min-width: 980px) {
+    .container {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .headline {
+        font-size: 40px;
+    }
+
+    .spacer {
+        margin-bottom: 40px;
+    }
 }

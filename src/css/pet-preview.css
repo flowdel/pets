@@ -1,8 +1,39 @@
 .pet-preview__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
+
+.pet-preview__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.pet-preview__img {
+    width: 250px;
+    height: 300px
+}
+
+.pet-preview__text {
+    color: white;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 250px;
+    height: 300px
+}
+
+.pet-preview__info {
+    font-size: 20px;
+}
+
 
 .pet-preview__info {
     display: flex;
@@ -12,29 +43,25 @@
     padding: 20px;
 }
 
-.product-preview__name {
+.pet-preview__name {
     font-size: 25px;
+    margin-bottom: 10px;
 }
 
-.pet-preview__img {
+/* .pet-preview__img {
     width: 350px;
-    height: 470px;
-}
+} */
 
 .pet-preview__img:hover {
     opacity: 40%;
 }
 
-.pet-preview__text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
+/* .pet-preview__text {
+
     width: 350px;
     height: 470px;
-    color: white;
-    opacity: 0
-}
+
+} */
 
 .pet-preview__text:hover {
     cursor: pointer;
@@ -83,25 +110,31 @@
     font-weight: 300;
 }
 
+@media (min-width: 540px) {
+    .pet-preview:first-child {
+        margin-right: 20px;
+    }
 
-
-
-/* .pet-preview_type_vertical  {
-    display: flex;
 }
 
-.pet-preview_type_vertical .pet-preview__info {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 20px;
+@media (min-width: 790px) {
+    .pet-preview:nth-child(2) {
+        margin-right: 20px;
+    }
 }
 
-.pet-preview_type_vertical .pet-preview__name {
-    margin-bottom: 10px;
+@media (min-width: 850px) {
+
+    .pet-preview {
+        margin-right: 0;
+    }
+
+
+    .pet-preview__container {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
 }
 
-.pet-preview_type_vertical .pet-preview__img {
-    width: 100px;
-    height: 80px;
-} */
+
