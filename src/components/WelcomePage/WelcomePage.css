@@ -1,0 +1,10 @@
+.welcome-page__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.welcome-page__container a {
+    color: black;
+    text-decoration: none;
+}

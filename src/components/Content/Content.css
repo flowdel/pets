@@ -1,0 +1,29 @@
+.content-box {
+    padding: 25px;
+    background-color: white;
+}
+
+.content-box h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #FFB043;
+    font-weight: 400;
+}
+
+.content-box h2 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.content-box p {
+    text-align: justify;
+}
+
+.content-box td {
+    padding: 10px;
+    padding-left: 0px
+}
+
+.content-box td:first-child {
+    font-weight: 500;
+}

@@ -20,14 +20,29 @@
     width: 100%;
 }
 
+.form select {
+    padding: 5px 0;
+    border: 1px solid #d1cece;
+}
+
 .form textarea {
     border: 1px solid #d1cece;
     width: 100%;
 }
 
 .form input, 
-.form textarea {
+.form textarea,
+.form select {
     outline-color: #FFB043;
+}
+
+#form__age {
+    width: 46px;
+    padding-left: 5px;
+}
+
+#form__sex {
+    width: 46px;
 }
 
 .form__img {
@@ -40,7 +55,7 @@
     margin-bottom: 10px;
 }
 
-.form__row .form__column:last-child {
+/* .form__row .form__column:last-child {
     color: #C4C4C4;
 }
 
@@ -51,4 +66,63 @@
 .form__row .form__column:last-child div:hover {
     color: #FFB043;
     cursor: pointer;
+} */
+
+.form__rating {
+    font-size: 0;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.form__rating * {
+    font-size: 35px;
+    line-height: 15px;
+}
+.form__rating > input {
+    display: none;
+}
+.form__rating > input + label {
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 9999px;
+    width: 20px;
+    margin-right: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.form__rating > input + label:last-child {
+    margin-right: 0
+}
+
+.form__rating > input + label:before {
+    display: inline-block;
+    text-indent: -9999px;
+    content: "●";
+    color: #C4C4C4;
+    padding-bottom: 5px;
+}
+.form__rating > input:checked ~ label:before, 
+.form__rating > input + label:hover ~ label:before, 
+.form__rating > input + label:hover:before {
+    content: "●";
+    color: #FFB043;
+}
+.form__rating > .form__rating-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+}
+.form__rating > .form__rating-clear + label:before {
+    width: .5em;
+}
+.form__rating:hover > input + label:before {
+    content: "●";
+    color: #C4C4C4;
+    text-shadow: none;
+}
+.form__rating:hover > input + label:hover ~ label:before, 
+.form__rating:hover > input + label:hover:before {
+    content: "●";
+    color: #FFB043;
 }

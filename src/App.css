@@ -22,6 +22,10 @@ img {
     padding-left: 10px;
 }
 
+.content-wrapper {
+    background-color: white;
+}
+
 .spacer {
     height: 1px;
     margin-bottom: 20px;
@@ -32,6 +36,16 @@ img {
     margin-bottom: 15px;
     color: #FFB043;
     font-weight: 400;
+}
+
+.column {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.row {
+    padding-right: 15px;
+    padding-left: -15px;
 }
 
 @media (min-width: 980px) {

@@ -30,6 +30,15 @@
 
     .desktop-nav__options {
         display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 15px;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        width: 200%;
+        z-index: 2;
     }
 
     .desktop-nav__link:hover {
@@ -42,14 +51,6 @@
 
     .desktop-nav__link:hover .desktop-nav__options {
         display: flex;
-        position: absolute;
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 15px;
-        top: 100%;
-        left: 0;
-        background-color: white;
-        width: 200%;
     }
     
     .desktop-nav__option-item {

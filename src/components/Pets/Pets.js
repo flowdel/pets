@@ -1,137 +1,69 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Aux from '../../hoc/Aux/Aux';
 import PetPreview from './PetPreview/PetPreview';
-import { useLocation } from 'react-router-dom';
+import './Pets.css';
+import { useLocation, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions/index';
 
 const Pets = (props) => {
-    const [catInfo, setCatInfo] = useState([
-        {
-           name: 'Мурка',
-           age: 5,
-           fluffiness: 3,
-           purr: 2,
-           playfulness: 5,
-           imageUrl: require('../../images/cat.png')
-        },
-        {
-            name: 'Васька',
-            age: 7,
-            fluffiness: 4,
-            purr: 5,
-            playfulness: 4,
-            imageUrl: require('../../images/cat1.png')
-        },
-        {
-            name: 'Юся',
-            age: 3,
-            fluffiness: 5,
-            purr: 5,
-            playfulness: 4,
-            imageUrl: require('../../images/cat2.png')
-        },
-        {
-            name: 'Фунф',
-            age: 9,
-            fluffiness: 5,
-            purr: 5,
-            playfulness: 3,
-            imageUrl: require('../../images/cat3.png')
-        },
-        {
-            name: 'Тапик',
-            age: 6,
-            fluffiness: 2,
-            purr: 5,
-            playfulness: 3,
-            imageUrl: require('../../images/cat4.png')
-        },
-        {
-            name: 'Колба',
-            age: 4,
-            fluffiness: 2,
-            purr: 3,
-            playfulness: 3,
-            imageUrl: require('../../images/cat5.png')
-        }
-    ]);
+    const petType = useLocation().pathname;
+    console.log(props.pets);
 
-    const [dogInfo, setDogInfo] = useState([
-        {
-           name: 'Дружок',
-           age: 5,
-           fluffiness: 3,
-           purr: 2,
-           playfulness: 5,
-           imageUrl: require('../../images/dog.png')
-        },
-        {
-            name: 'Шарик',
-            age: 7,
-            fluffiness: 4,
-            purr: 5,
-            playfulness: 4,
-            imageUrl: require('../../images/dog1.png')
-        },
-        {
-            name: 'Милли',
-            age: 3,
-            fluffiness: 5,
-            purr: 5,
-            playfulness: 4,
-            imageUrl: require('../../images/dog2.png')
-        },
-        {
-            name: 'Карри',
-            age: 3,
-            fluffiness: 5,
-            purr: 5,
-            playfulness: 4,
-            imageUrl: require('../../images/dog3.png')
-        },
-        {
-            name: 'Туттик',
-            age: 3,
-            fluffiness: 5,
-            purr: 5,
-            playfulness: 4,
-            imageUrl: require('../../images/dog4.png')
-        }
-    ]);
+    useEffect(() => {
+        props.onInitPets(petType);
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [petType]);
 
-    let petInfo;
-    const location = useLocation();
-    if (location.pathname === '/cats') {
-        petInfo = catInfo;
-    } else if (location.pathname === '/dogs') {
-        petInfo = dogInfo;
-    } else {
-        return null;
-    }
     return (
         <Aux>
             <div className="spacer"></div>
             <div className="container">
-                <div className="pet-preview__container">
-                    {
-                        petInfo.map(pet => {
-                            return <PetPreview 
-                            key={pet.name}
-                            name={pet.name}
-                            age={pet.age}
-                            fluffiness={pet.fluffiness}
-                            purr={pet.purr}
-                            playfulness={pet.playfulness}
-                            imageUrl={pet.imageUrl}
-                            class={"pet-preview_type_small"}
-                            ></PetPreview>;
-                        })
-                    }
+                <div className="pets">
+                    <div className="row">
+                        <div className="pets__container">
+                            {
+                                props.pets.map(pet => {
+                                    return <div className="column" key={pet.id}><Link  to={`/${pet.type}s/${pet.id}`} style={{textDecoration: 'none', color: 'black'}}>
+                                        <PetPreview 
+                                        name={pet.name}
+                                        age={pet.age}
+                                        fluff={pet.fluff}
+                                        purr={pet.purr}
+                                        play={pet.play}
+                                        image={pet.image[0].url}
+                                        class={"pet-preview_type_small"}
+                                        ></PetPreview>
+                                    </Link></div>
+                                })
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
         </Aux>
     );
 };
 
-export default Pets;
+Pets.propTypes = {
+    pets: PropTypes.array,
+    onInitPets: PropTypes.func,
+};
+
+const mapStateToProps = state => {
+    return {
+        pets: state.pets.pets
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onInitPets: (petType) => dispatch(actions.fetchPets(petType)),
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Pets);
 
 

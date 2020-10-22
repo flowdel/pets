@@ -1,0 +1,54 @@
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black
+}
+
+.logo__name {
+    text-align: center;
+}
+
+.logo__name-item {
+    margin: 2px 0px;
+}
+
+.logo__name-item:first-child {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.logo__name-item:last-child {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.logo__img {
+    display: block;
+    height: 70px;
+    width: 70px;
+    margin-right: 23px;
+}
+
+@media (min-width: 370px) {
+    .logo__img {
+        height: 75px;
+        width: 75px;
+    }
+
+    .logo__name-item:first-child {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .logo__name-item:last-child {
+        font-size: 15px;
+    }
+}
+
+
+@media (min-width: 500px) {
+    .logo__name-item:first-child {
+        font-size: 25px;
+    }
+}

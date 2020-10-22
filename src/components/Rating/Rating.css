@@ -1,0 +1,58 @@
+.rating {
+    font-size: 0;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.rating * {
+    font-size: 35px;
+    line-height: 15px;
+}
+.rating > input {
+    display: none;
+}
+.rating > input + label {
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 9999px;
+    width: 20px;
+    margin-right: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.rating > input + label:last-child {
+    margin-right: 0
+}
+
+.rating > input + label:before {
+    display: inline-block;
+    text-indent: -9999px;
+    content: "●";
+    color: #C4C4C4;
+    padding-bottom: 5px;
+}
+.rating > input:checked ~ label:before, 
+.rating > input + label:hover ~ label:before, 
+.rating > input + label:hover:before {
+    content: "●";
+    color: #FFB043;
+}
+.rating > .rating-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+}
+.rating > .rating-clear + label:before {
+    width: .5em;
+}
+.rating:hover > input + label:before {
+    content: "●";
+    color: #C4C4C4;
+    text-shadow: none;
+}
+.rating:hover > input + label:hover ~ label:before, 
+.rating:hover > input + label:hover:before {
+    content: "●";
+    color: #FFB043;
+}
