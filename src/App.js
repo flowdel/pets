@@ -56,11 +56,11 @@ const App = (props) => {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="app">
         <Header />
         {routes}
-        <Footer />
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }

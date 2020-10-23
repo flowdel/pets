@@ -1,6 +1,8 @@
 .footer {
-    position: sticky;
+    /* position: sticky; */
     background-color: white;
+    flex-shrink: 0;
+    /* margin-top: -200px; */
 }
 
 .footer .spacer {

@@ -7,7 +7,6 @@ import './Footer.css';
 const Footer = () => {
     return (
         <Aux>
-            <div className="spacer"></div>
             <div className="footer">
                 <div className="spacer"></div>
                 <div className="container">
